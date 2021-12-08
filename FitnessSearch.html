@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./css/FitnessSearch.css">
+    <script type="text/javascript" src="./js/FitnessSearch.js">
+    </script>
+    <title>헬스장 검색 결과</title>
+
+
+    <style>
+        @font-face {
+            font-family: "jua";
+            src: url("./fonts/BMJUA_ttf.ttf");
+        }
+
+        * {
+            font-family: "jua";
+        }
+
+        nav {
+            height: 115px;
+            border-bottom: 1px solid black;
+        }
+
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: none;
+        }
+
+        #logo {
+            position: relative;
+            top: 15px;
+        }
+
+        #searchBox {
+            text-align: center;
+        }
+
+        #searchBox input {
+            font-size: 20px;
+            border: 0px;
+            position: relative;
+            bottom: 85px;
+            right: 140px;
+        }
+
+        #searchBox img {
+            position: relative;
+            bottom: 65px;
+            left: 150px;
+        }
+
+        #searchBox input[type="submit"] {
+            position: relative;
+            right: 125px;
+            width: 32px;
+            height: 32px;
+            opacity: 0;
+        }
+
+        .menu {
+            position: relative;
+            float: right;
+            padding-left: 20px;
+            bottom: 90px;
+            margin-right: 10px;
+            font-size: 22px;
+        }
+
+        hr {
+            position: relative;
+            bottom: 80px;
+            border: 1px solid black;
+            width: 100%;
+        }
+
+        #memberBox {
+            position: relative;
+            float: right;
+        }
+
+        .member {
+            padding-left: 5px;
+            margin-right: 10px;
+            position: relative;
+            bottom: 180px;
+        }
+
+        section img {
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            left: 60px;
+        }
+
+        dt {
+            margin: 10px;
+            position: relative;
+            left: 25px;
+            font-size: 20px;
+        }
+
+        dl {
+            position: relative;
+            bottom: 70px;
+            margin: 2px;
+        }
+
+        footer {
+            text-align: center;
+            border-top: solid 1px black;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#"><img src="./images/Logo.jpg" alt="로고" width="200px" height="100px" id="logo"></a>
+
+            <form action="" id="searchBox">
+                <!-- reset버튼 최근검색어, -->
+                <div>
+                    <img src="./images/searchBox.png" alt="" width="300px">
+                    <input type="text">
+                    <input type="submit" value=" d">
+                </div>
+            </form>
+
+            <span class="menu"><a href="#">헬스장검색</a></span>
+            <span class="menu"><a href="#">트레이너검색</a></span>
+            <span class="menu"><a href="#">커뮤니티</a></span>
+            <span class="menu"><a href="#">블로그</a></span>
+            <hr>
+            <div id="memberBox">
+                <span class="member"><a href="#">로그인</a></span>
+                <span class="member"><a href="#">회원가입</a></span>
+            </div>
+
+        </nav>
+
+    </header>
+    <section id="filterBar">
+        <span class="filterDesc filterText">빠르고 정확한 원하는 헬스장 검색</span>
+        <span class="filter filterText">운동 기구 ⯆</span>
+        <span class="filter filterText">시설/서비스 ⯆</span>
+        <span class="filter filterText">위치 ⯆</span>
+
+        <span><img src="./images/map_3x.png" alt="" width="45px"></span>
+
+
+    </section>
+    <section id="checks">
+        <span class="filter2">ez바 상 Hammer strength 5</span>
+        <p><br>
+            <h3>메이커</h3>
+            <input type="checkbox" checked> MATRIX
+            <input type="checkbox"> bs보스턴
+            <input type="checkbox"> 스포플렉스
+            <input type="checkbox"> 싸이벡스
+            <input type="checkbox"> 라이프피트니스
+            <input type="checkbox"> bs보스턴
+            <input type="checkbox"> 해머스트랭스
+            <h3>신체부위</h3>
+            <input type="checkbox" name="가슴">가슴
+            <input type="checkbox" name="1">등
+            <input type="checkbox" name="2">하체
+            <input type="checkbox" name="32">어깨
+            <input type="checkbox" name="42">팔
+            <input type="checkbox" name="52">복근
+            <input type="checkbox" name="62">유산소(폐)
+            <input type="checkbox" name="72">종합
+            <h3>보유개수</h3>
+            <input type="text" value = "1" />
+            <input type="submit" value="입력">
+            <h3>기구상태</h3>
+            <input type="checkbox" name="best">상
+            <input type="checkbox" name="normal">중
+            <input type="checkbox" name="bad">하
+
+    </section>
+    <section id="map">
+        <img src="./images/Fitness_map.jpg" alt="" width="1000px">
+    </section>
+    <section id="orderBy">
+        <table border="1">
+            <tr>
+                <th>정확도순</th>
+                <th>리뷰많은순</th>
+                <th>별점많은순</th>
+                <th>찜많은순</th>
+            </tr>
+        </table>
+    </section>
+    <section id="fitnessList">
+        <div>
+            <img src="./images/Fitness_center.jpg" alt="" width="200px">
+            <h2>영등포 피트니스 센터</h2>
+            <p>영등포역 근처 200m 내 위치<br>
+                영등포역 근처 200m 내 위치<br>
+                영등포역 근처 200m 내 위치<br>
+                영등포역 근처 200m 내 위치<br></p>
+        </div>
+        <span class="normal">
+            +더보기
+        </span>
+    </section>
+    <footer>
+        <span>© 2021 Company, Inc</span>
+    </footer>
+</body>
+
+</html>
